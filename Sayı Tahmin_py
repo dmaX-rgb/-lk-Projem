@@ -1,0 +1,22 @@
+import random
+
+print("Sayı Tahmin Oyununa Hoşgeldin!")
+
+hedef = random.randint(1, 20)
+hak = 5
+
+while hak > 0:
+    tahmin = int(input("Bir sayı tahmin et (1-20): "))
+    
+    if tahmin == hedef:
+        print("Tebrikler, bildin!")
+        break
+    elif tahmin < hedef:
+        print("Daha büyük bir sayı dene.")
+    else:
+        print("Daha küçük bir sayı dene.")
+    
+    hak -= 1
+    print("Kalan hakkın:", hak)
+
+# Buraya oyunu kaybedince hedef sayıyı gösteren bir satır ekle!
